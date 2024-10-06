@@ -1,39 +1,41 @@
 # Email Processing Application
 
-## Description
-An application to process and display emails fetched from Gmail.
-
 ## Components
 
 ### EmailList
-A component to display a list of emails.
+- Display a list of emails with sender, subject, and date
+- Include pagination or infinite scroll
+- Allow sorting by date, sender, or subject
+- Implement search functionality
 
 ### EmailDetail
-A component to display the details of a selected email.
+- Show full email content including body, attachments, and headers
+- Provide options to reply, forward, or delete the email
+- Display attachments with download links
 
 ### SyncButton
-A button to trigger email synchronization.
+- A prominent button to trigger email synchronization
+- Show sync status (e.g., in progress, last synced time)
 
 ## Pages
 
 ### Home
-The main page of the application, containing the EmailList, EmailDetail, and SyncButton components.
+- Layout with a sidebar containing EmailList
+- Main content area for EmailDetail
+- Header with SyncButton and user info
 
-## API
+## API Endpoints
 
 ### /api/sync-emails
-An API endpoint to trigger email synchronization.
+- POST request to trigger email synchronization
+- Return sync status and last synced time
 
 ### /api/emails
-An API endpoint to fetch processed emails.
+- GET request to fetch processed emails
+- Support pagination and filtering
 
-## Database
+### /api/email/:id
+- GET request to fetch a single email's details
 
-### emails
-A table to store processed email data.
-
-### attachments
-A table to store email attachment data.
-
-## Integration
-This application should integrate with the existing email_processor.py script for email processing and database operations.
+### /api/attachments/:id
+- GET request to download an attachment

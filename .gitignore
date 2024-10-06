@@ -1,0 +1,17 @@
+ # Python
+   __pycache__/
+   *.py[cod]
+   *.so
+   venv/
+
+   # Environment and credentials
+   .env
+   credentials.json
+   token.json
+
+   # Logs
+   *.log
+
+   # OS generated files
+   .DS_Store
+   Thumbs.db
